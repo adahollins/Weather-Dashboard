@@ -36,12 +36,12 @@ $("#search-button").on("click", function(event) {
 
             //Today's Weather
             var cityName = data.city.name;
-            var todayDate = data.list[0].dt_txt;
-            var todayTitle = $("<h1>").text(cityName +  " " + todayDate);
+            var todayDate = dayjs().format('DD/MM/YYYY');
+            var todayTitle = $("<h3>").text(cityName +  " " + todayDate);
             todayHTML.append(todayTitle);
 
             var todayWeather = data.list[0].weather[0].main;
-            var todayWeatherTitle = $("<h3>").text(todayWeather);
+            var todayWeatherTitle = $("<h4>").text(todayWeather);
             todayHTML.append(todayWeatherTitle);
 
             var todayTemp = data.list[0].main.temp;
@@ -58,12 +58,12 @@ $("#search-button").on("click", function(event) {
             //Day One
             var dayOneDiv = $("<div id='day-one' class='5-day'>");
 
-            var dayOneDate = data.list[7].dt_txt;
-            var dayOneTitle = $("<h1>").text(dayOneDate);
+            var dayOneDate = dayjs().add(1, 'd').format('DD/MM/YYYY');
+            var dayOneTitle = $("<h4>").text(dayOneDate);
             dayOneDiv.append(dayOneTitle);
 
             var dayOneWeather = data.list[7].weather[0].main;
-            var dayOneWeatherTitle = $("<h3>").text(dayOneWeather);
+            var dayOneWeatherTitle = $("<h5>").text(dayOneWeather);
             dayOneDiv.append(dayOneWeatherTitle);
 
             var dayOneTemp = data.list[7].main.temp;
@@ -80,12 +80,12 @@ $("#search-button").on("click", function(event) {
             //Day Two
             var dayTwoDiv = $("<div id='day-two' class='5-day'>");
 
-            var dayTwoDate = data.list[14].dt_txt;
-            var dayTwoTitle = $("<h1>").text(dayTwoDate);
+            var dayTwoDate = dayjs().add(2, 'd').format('DD/MM/YYYY');
+            var dayTwoTitle = $("<h4>").text(dayTwoDate);
             dayTwoDiv.append(dayTwoTitle);
 
             var dayTwoWeather = data.list[14].weather[0].main;
-            var dayTwoWeatherTitle = $("<h3>").text(dayTwoWeather);
+            var dayTwoWeatherTitle = $("<h5>").text(dayTwoWeather);
             dayTwoDiv.append(dayTwoWeatherTitle);
 
             var dayTwoTemp = data.list[14].main.temp;
@@ -102,12 +102,12 @@ $("#search-button").on("click", function(event) {
             //Day Three
             var dayThreeDiv = $("<div id='day-thre' class='5-day'>");
 
-            var dayThreeDate = data.list[21].dt_txt;
-            var dayThreeTitle = $("<h1>").text(dayThreeDate);
+            var dayThreeDate = dayjs().add(3, 'd').format('DD/MM/YYYY');
+            var dayThreeTitle = $("<h4>").text(dayThreeDate);
             dayThreeDiv.append(dayThreeTitle);
 
             var dayThreeWeather = data.list[21].weather[0].main;
-            var dayThreeWeatherTitle = $("<h3>").text(dayThreeWeather);
+            var dayThreeWeatherTitle = $("<h5>").text(dayThreeWeather);
             dayThreeDiv.append(dayThreeWeatherTitle);
 
             var dayThreeTemp = data.list[21].main.temp;
@@ -124,12 +124,12 @@ $("#search-button").on("click", function(event) {
             //Day Four
             var dayFourDiv = $("<div id='day-four' class='5-day'>");
 
-            var dayFourDate = data.list[28].dt_txt;
-            var dayFourTitle = $("<h1>").text(dayFourDate);
+            var dayFourDate = dayjs().add(4, 'd').format('DD/MM/YYYY');
+            var dayFourTitle = $("<h4>").text(dayFourDate);
             dayFourDiv.append(dayFourTitle);
 
             var dayFourWeather = data.list[28].weather[0].main;
-            var dayFourWeatherTitle = $("<h3>").text(dayFourWeather);
+            var dayFourWeatherTitle = $("<h5>").text(dayFourWeather);
             dayFourDiv.append(dayFourWeatherTitle);
 
             var dayFourTemp = data.list[28].main.temp;
@@ -146,12 +146,12 @@ $("#search-button").on("click", function(event) {
             //Day Five
             var dayFiveDiv = $("<div id='day-five' class='5-day'>");
 
-            var dayFiveDate = data.list[35].dt_txt;
-            var dayFiveTitle = $("<h1>").text(dayFiveDate);
+            var dayFiveDate = dayjs().add(5, 'd').format('DD/MM/YYYY');
+            var dayFiveTitle = $("<h4>").text(dayFiveDate);
             dayFiveDiv.append(dayFiveTitle);
 
             var dayFiveWeather = data.list[35].weather[0].main;
-            var dayFiveWeatherTitle = $("<h3>").text(dayFiveWeather);
+            var dayFiveWeatherTitle = $("<h5>").text(dayFiveWeather);
             dayFiveDiv.append(dayFiveWeatherTitle);
 
             var dayFiveTemp = data.list[35].main.temp;
