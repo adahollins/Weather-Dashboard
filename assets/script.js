@@ -53,10 +53,11 @@ $("#search-button").on("click", function(event) {
             todayHTML.append(todayTempP);
             todayHTML.append(todayWindP);
             todayHTML.append(todayHumidityP);
+            todayHTML.addClass('edit-border');
 
             //The weather for the next 5 days
             //Day One
-            var dayOneDiv = $("<div id='day-one' class='5-day'>");
+            var dayOneDiv = $("<div id='day-one' class='5-day col-3 bg-dark text-white'>");
 
             var dayOneDate = dayjs().add(1, 'd').format('DD/MM/YYYY');
             var dayOneTitle = $("<h4>").text(dayOneDate);
@@ -78,7 +79,7 @@ $("#search-button").on("click", function(event) {
             forecastHTML.append(dayOneDiv);
 
             //Day Two
-            var dayTwoDiv = $("<div id='day-two' class='5-day'>");
+            var dayTwoDiv = $("<div id='day-two' class='5-day col-3 bg-dark text-white'>");
 
             var dayTwoDate = dayjs().add(2, 'd').format('DD/MM/YYYY');
             var dayTwoTitle = $("<h4>").text(dayTwoDate);
@@ -100,7 +101,7 @@ $("#search-button").on("click", function(event) {
             forecastHTML.append(dayTwoDiv);
 
             //Day Three
-            var dayThreeDiv = $("<div id='day-thre' class='5-day'>");
+            var dayThreeDiv = $("<div id='day-thre' class='5-day col-3 bg-dark text-white'>");
 
             var dayThreeDate = dayjs().add(3, 'd').format('DD/MM/YYYY');
             var dayThreeTitle = $("<h4>").text(dayThreeDate);
@@ -122,7 +123,7 @@ $("#search-button").on("click", function(event) {
             forecastHTML.append(dayThreeDiv);
 
             //Day Four
-            var dayFourDiv = $("<div id='day-four' class='5-day'>");
+            var dayFourDiv = $("<div id='day-four' class='5-day col-3 bg-dark text-white'>");
 
             var dayFourDate = dayjs().add(4, 'd').format('DD/MM/YYYY');
             var dayFourTitle = $("<h4>").text(dayFourDate);
@@ -144,7 +145,7 @@ $("#search-button").on("click", function(event) {
             forecastHTML.append(dayFourDiv);
 
             //Day Five
-            var dayFiveDiv = $("<div id='day-five' class='5-day'>");
+            var dayFiveDiv = $("<div id='day-five' class='5-day col-3 bg-dark text-white'>");
 
             var dayFiveDate = dayjs().add(5, 'd').format('DD/MM/YYYY');
             var dayFiveTitle = $("<h4>").text(dayFiveDate);
