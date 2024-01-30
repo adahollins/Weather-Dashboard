@@ -53,7 +53,6 @@ $("#search-button").on("click", function(event) {
             todayHTML.append(todayTempP);
             todayHTML.append(todayWindP);
             todayHTML.append(todayHumidityP);
-            todayHTML.addClass('edit-border');
 
             //The weather for the next 5 days
             //Day One
