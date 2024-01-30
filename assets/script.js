@@ -56,23 +56,114 @@ $("#search-button").on("click", function(event) {
 
             //The weather for the next 5 days
             //Day One
-            var dayOneDate = data.list[0].dt_txt;
-            var dayOneTitle = $("<h1>").text(cityName +  " " + dayOneDate);
-            todayHTML.append(dayOneTitle);
+            var dayOneDiv = $("<div id='day-one' class='5-day'>");
 
-            var dayOneWeather = data.list[0].weather[0].main;
+            var dayOneDate = data.list[7].dt_txt;
+            var dayOneTitle = $("<h1>").text(dayOneDate);
+            dayOneDiv.append(dayOneTitle);
+
+            var dayOneWeather = data.list[7].weather[0].main;
             var dayOneWeatherTitle = $("<h3>").text(dayOneWeather);
-            todayHTML.append(dayOneWeatherTitle);
+            dayOneDiv.append(dayOneWeatherTitle);
 
-            var dayOneTemp = data.list[0].main.temp;
+            var dayOneTemp = data.list[7].main.temp;
             var dayOneTempP = $("<p>").text("Temp: " + dayOneTemp + "°C");
-            var dayOneyWind = data.list[0].wind.speed;
+            var dayOneWind = data.list[7].wind.speed;
             var dayOneWindP = $("<p>").text("Wind: " + dayOneWind + " km/h");
-            var dayOneHumidity = data.list[0].main.humidity;
+            var dayOneHumidity = data.list[7].main.humidity;
             var dayOneHumidityP = $("<p>").text("Humidity: " + dayOneHumidity + "%");
-            todayHTML.append(dayOneTempP);
-            todayHTML.append(dayOneWindP);
-            todayHTML.append(dayOneHumidityP);
+            dayOneDiv.append(dayOneTempP);
+            dayOneDiv.append(dayOneWindP);
+            dayOneDiv.append(dayOneHumidityP);
+            forecastHTML.append(dayOneDiv);
+
+            //Day Two
+            var dayTwoDiv = $("<div id='day-two' class='5-day'>");
+
+            var dayTwoDate = data.list[14].dt_txt;
+            var dayTwoTitle = $("<h1>").text(dayTwoDate);
+            dayTwoDiv.append(dayTwoTitle);
+
+            var dayTwoWeather = data.list[14].weather[0].main;
+            var dayTwoWeatherTitle = $("<h3>").text(dayTwoWeather);
+            dayTwoDiv.append(dayTwoWeatherTitle);
+
+            var dayTwoTemp = data.list[14].main.temp;
+            var dayTwoTempP = $("<p>").text("Temp: " + dayTwoTemp + "°C");
+            var dayTwoWind = data.list[14].wind.speed;
+            var dayTwoWindP = $("<p>").text("Wind: " + dayTwoWind + " km/h");
+            var dayTwoHumidity = data.list[14].main.humidity;
+            var dayTwoHumidityP = $("<p>").text("Humidity: " + dayTwoHumidity + "%");
+            dayTwoDiv.append(dayTwoTempP);
+            dayTwoDiv.append(dayTwoWindP);
+            dayTwoDiv.append(dayTwoHumidityP);
+            forecastHTML.append(dayTwoDiv);
+
+            //Day Three
+            var dayThreeDiv = $("<div id='day-thre' class='5-day'>");
+
+            var dayThreeDate = data.list[21].dt_txt;
+            var dayThreeTitle = $("<h1>").text(dayThreeDate);
+            dayThreeDiv.append(dayThreeTitle);
+
+            var dayThreeWeather = data.list[21].weather[0].main;
+            var dayThreeWeatherTitle = $("<h3>").text(dayThreeWeather);
+            dayThreeDiv.append(dayThreeWeatherTitle);
+
+            var dayThreeTemp = data.list[21].main.temp;
+            var dayThreeTempP = $("<p>").text("Temp: " + dayThreeTemp + "°C");
+            var dayThreeWind = data.list[21].wind.speed;
+            var dayThreeWindP = $("<p>").text("Wind: " + dayThreeWind + " km/h");
+            var dayThreeHumidity = data.list[21].main.humidity;
+            var dayThreeHumidityP = $("<p>").text("Humidity: " + dayThreeHumidity + "%");
+            dayThreeDiv.append(dayThreeTempP);
+            dayThreeDiv.append(dayThreeWindP);
+            dayThreeDiv.append(dayThreeHumidityP);
+            forecastHTML.append(dayThreeDiv);
+
+            //Day Four
+            var dayFourDiv = $("<div id='day-four' class='5-day'>");
+
+            var dayFourDate = data.list[28].dt_txt;
+            var dayFourTitle = $("<h1>").text(dayFourDate);
+            dayFourDiv.append(dayFourTitle);
+
+            var dayFourWeather = data.list[28].weather[0].main;
+            var dayFourWeatherTitle = $("<h3>").text(dayFourWeather);
+            dayFourDiv.append(dayFourWeatherTitle);
+
+            var dayFourTemp = data.list[28].main.temp;
+            var dayFourTempP = $("<p>").text("Temp: " + dayFourTemp + "°C");
+            var dayFourWind = data.list[28].wind.speed;
+            var dayFourWindP = $("<p>").text("Wind: " + dayFourWind + " km/h");
+            var dayFourHumidity = data.list[28].main.humidity;
+            var dayFourHumidityP = $("<p>").text("Humidity: " + dayFourHumidity + "%");
+            dayFourDiv.append(dayFourTempP);
+            dayFourDiv.append(dayFourWindP);
+            dayFourDiv.append(dayFourHumidityP);
+            forecastHTML.append(dayFourDiv);
+
+            //Day Five
+            var dayFiveDiv = $("<div id='day-five' class='5-day'>");
+
+            var dayFiveDate = data.list[35].dt_txt;
+            var dayFiveTitle = $("<h1>").text(dayFiveDate);
+            dayFiveDiv.append(dayFiveTitle);
+
+            var dayFiveWeather = data.list[35].weather[0].main;
+            var dayFiveWeatherTitle = $("<h3>").text(dayFiveWeather);
+            dayFiveDiv.append(dayFiveWeatherTitle);
+
+            var dayFiveTemp = data.list[35].main.temp;
+            var dayFiveTempP = $("<p>").text("Temp: " + dayFiveTemp + "°C");
+            var dayFiveWind = data.list[35].wind.speed;
+            var dayFiveWindP = $("<p>").text("Wind: " + dayFiveWind + " km/h");
+            var dayFiveHumidity = data.list[35].main.humidity;
+            var dayFiveHumidityP = $("<p>").text("Humidity: " + dayFiveHumidity + "%");
+            dayFiveDiv.append(dayFiveTempP);
+            dayFiveDiv.append(dayFiveWindP);
+            dayFiveDiv.append(dayFiveHumidityP);
+            forecastHTML.append(dayFiveDiv);
         });
         });
 
