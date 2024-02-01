@@ -1,16 +1,33 @@
 $(document).ready(function () {
     // https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API_KEY}
     
-    var apiKey = ADD_YOUR_KEY_HERE;
+    var apiKey = WEATHER_KEY;
 
     var searchString = "";
+    var cities = ["London", "Warsaw"];
 
     var todayHTML = $("#today");
     var forecastHTML = $("#forecast");
 
+    function makeButtons() {
+        $(".list-group").empty();
+
+        for (var i = 0; i < cities.length; i++) {
+
+            var cityButtons = $("<button>");
+            cityButtons.addClass("cities");
+            cityButtons.attr("data-name", cities[i]);
+            cityButtons.text(cities[i]);
+            $(".list-group").append(cityButtons);
+        }
+    };
 
 $("#search-button").on("click", function(event) {
     event.preventDefault();
+
+    var city = $("#search-input").val().trim();
+    cities.push(city);
+    makeButtons();
 
     $("#today").empty();
     searchString = $("#search-input").val();
@@ -167,6 +184,7 @@ $("#search-button").on("click", function(event) {
         });
         });
 
+        makeButtons();
 
 });
 });
